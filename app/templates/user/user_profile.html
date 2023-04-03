@@ -1,0 +1,134 @@
+{% extends "main/base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main/profile.css') }}">
+
+{% endblock %}
+
+{% block title %} Profile {% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <div class="profile-viewer-container">
+        <div class="profile-main-image">
+{#            <img src="{{ url_for('static', filename='images/user/'+current_user.image ) }}" alt="">#}
+            <div class='profile-image' style="background-image: url({{ url_for('static', filename='images/user/'+current_user.image) }})"></div>
+
+            <div class="profile-name"><h3>{{ current_user.username|capitalize }}</h3></div>
+        </div>
+
+        <div class="profile-info">
+            <div class="profile-data">
+                <span class="data"><span>{{ current_user.username|capitalize }}</span></span> <span class="label">Username</span>
+            </div>
+
+            <div class="profile-data">
+                <span class="data"><span>{{ current_user.age }}</span></span> <span class="label">Age</span>
+            </div>
+            <div class="profile-data">
+                <span class="data"><span>{{ current_user.balance }}$</span></span> <span class="label">Balance</span>
+            </div>
+            <div class="profile-data">
+                <span class="data"><span>{{ current_user.email }}</span></span> <span class="label">Mail Address</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="profile-edit-container">
+        <div class="edit-header">
+            <h3>EDIT</h3>
+        </div>
+
+        <div class="edit-profile">
+            <form action="" method="POST" id="edit-form">
+                {{ form.hidden_tag() }}
+
+                <div class="form-element" id="username">
+                    <span class="form-element-logo material-symbols-outlined">badge</span>
+                    {{ form.username(class="input-field", id="username-input", placeholder="Enter Username", value=current_user.username|capitalize) }}
+                </div>
+
+                <div class="form-element" id="age">
+                    <span class="form-element-logo material-symbols-outlined">boy</span>
+                    {{ form.age(class="input-field", id="age-input", placeholder="Enter Age", value=current_user.age) }}
+                </div>
+
+                <div class="form-element" id="email">
+                    <span class="form-element-logo material-symbols-outlined">mail</span>
+                    {{ form.email(class="input-field", id="mail-input", placeholder="Enter mail address") }}
+                </div>
+
+                <div class="form-element" id="gender">
+                    <span class="form-element-logo material-symbols-outlined">mail</span>
+                    {{ form.gender(class="input-field", id="gender-input", default="2") }}
+                </div>
+
+                <div class="form-element" id="new-password">
+                    <span class="form-element-logo material-symbols-outlined">lock_reset</span>
+                    {{ form.new_password(class="input-field", id="new-password-input", placeholder="Enter new password") }}
+                </div>
+
+                <div class="form-element" id="password">
+                    <span class="form-element-logo material-symbols-outlined">password</span>
+                    {{ form.password(class="input-field", id="password-input", placeholder="Enter Password") }}
+                    <div class="required"><span>required</span></div>
+                </div>
+
+                <div class="form-element" id="submit">
+                    {{ form.submit(class="btn-blue-1", id="submit-input") }}
+                </div>
+
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+{% block body_last %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='javascript/set-passwordField-width.js') }}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

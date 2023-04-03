@@ -1,0 +1,41 @@
+:root{
+    --main-blue-header: #18354c;
+    --text-small-straight: 'Titillium Web', sans-serif;
+    --minor-blue-header: #346188;
+    --border-light-blue: #7aa7c7;
+    --gradient-blue-background: linear-gradient(120deg,
+    rgba(68, 127, 180, .3), rgba(68, 127, 180, .9));
+
+}
+body{
+    background-color: #fafafa;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border-style: none
+}
+
+hr{
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+}
+
+
+

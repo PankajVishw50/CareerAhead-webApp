@@ -1,0 +1,59 @@
+{% extends "main/base.html" %}
+{% from "macros/counsellor_card.html" import counsellor_card %}
+{% from "macros/page_nav.html" import page_nav %}
+
+{% block head %}
+    {{ super() }}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user/market.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user/filter_panel.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main/macros.css') }}">
+
+{% endblock %}
+
+{% block title %}
+    Market
+{% endblock %}
+
+{% block content %}
+    <div class="market-container">
+    <div class="mark-main-row-left">
+        {% include "user/filter_panel.html" %}
+    </div>
+
+    <div class="mark-main-row-center">
+        <div class="loading">
+            <div class="load-logo material-symbols-outlined">refresh</div>
+            <div class="load-text">Loading...</div>
+        </div>
+
+        <div class="counsellor-container">
+
+        </div>
+
+        <div class="market-navigation">
+            <div class="navigation-sector">
+                <div class="btn-nav previous">
+                    <button class="material-symbols-outlined nav-previous-btn">arrow_back</button>
+                </div>
+                <div class="page-input">
+                    <input type="number" class="page-input-field" min="0" max="{{ get_maxPage() }}" disabled>
+                </div>
+                <div class="btn-nav next">
+                    <button class="material-symbols-outlined nav-next-btn">arrow_forward</button>
+                </div>
+            </div>
+
+            <div class="position-sector"></div>
+        </div>
+    </div>
+
+    </div>
+{% endblock %}
+
+{% block body_last %}
+    <script src="{{ url_for('static', filename='javascript/load_counsellors.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/expand-collapse.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/price-slider.js') }}"></script>
+
+{% endblock %}

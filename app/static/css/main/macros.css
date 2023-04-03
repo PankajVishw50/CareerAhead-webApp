@@ -1,0 +1,113 @@
+
+
+/* Counsellor_card.html */
+
+.couns-card-container{
+    max-width: 400px;
+    min-width: 350px;
+    max-height: 200px;
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 65% 35%;
+    border: 1px solid var(--border-light-blue);
+    border-radius: 2px;
+    background: white;
+    box-shadow: 0 0 2px slategray;
+    padding: 5px;
+}
+
+.couns-image-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.couns-image-col img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.couns-info-col{
+    display: grid;
+    grid-template-rows: 25px 25px;
+    padding: 5px;
+}
+
+
+.couns-info-name{
+    font-family: "Teko", sans-serif;
+    font-size: 20px;
+}
+.couns-info-type{
+    font-family: "Sofia Sans Extra Condensed", sans-serif;
+    font-size: 14px;
+    color: gray;
+}
+
+.couns-info-desc{
+    font-size: 11px;
+    font-family: var(--text-small-straight);
+}
+.couns-info-desc span{
+    color: gray;
+    font-size: 9px;
+}
+
+.couns-btn-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.couns-btn-col a{
+    height: 60%;
+    width: 100%;
+}
+.couns-btn-col button{
+    height: 100%;
+    width: 100%;
+}
+
+.couns-review-col{
+    display: flex;
+    padding: 10px;
+
+}
+.couns-review-fee{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.couns-review-fee span{
+    color: limegreen;
+}
+.couns-review-fee .text {
+    font-family: "Sofia Sans Extra Condensed", sans-serif;
+}
+
+.couns-review-clients{
+    border-left: 3px solid green;
+    flex: 1;
+    white-space: nowrap;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-family: "Sofia Sans Extra Condensed", sans-serif;
+}
+
+.btn-nav{
+    height: 25px;
+}
+
+
+
+/* Responsive View */
+@media screen and (max-width:400px){
+    .couns-card-container{
+        min-width: auto;
+        max-height: none;
+        grid-template-rows: auto;
+    }
+}
+

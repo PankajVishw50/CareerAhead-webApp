@@ -1,0 +1,44 @@
+{% extends "main/base.html" %}
+{% import "macros/buttons.html" as buttons %}
+
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user/session_counter.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user/filter_panel.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user/account_window.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user/sessions.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/counsellor/clients.css') }}">
+
+
+
+{% endblock %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+
+    <div class="dash-main-row-left">
+        <div class="panel-container">
+            {% include "user/account_window.html" %}
+            {{ buttons.btn_blue_1( url_for('user.market_page'),"Explore Counsellors") }}
+        </div>
+    </div>
+
+    <div class="dash-main-row-center">
+        {% include "user/session_counter.html" %}
+
+        {% if current_user.can(Permission.COUNSELLOR) %}
+            {% include "counsellor/clients.html" %}
+        {% else %}
+            {% include "user/sessions.html" %}
+        {% endif %}
+    </div>
+
+    <div class="dash-main-row-right"></div>
+</div>
+{% endblock %}

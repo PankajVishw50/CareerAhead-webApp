@@ -1,0 +1,15 @@
+
+{% macro flash(messages) %}
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        {{ messages }}
+    </div>
+{% endmacro %}
+
+
+{% macro flash_placeholder() %}
+    <div class="alert flash-placeholder" style="display: none">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <span class="flash-placeholder-data"></span>
+    </div>
+{% endmacro %}

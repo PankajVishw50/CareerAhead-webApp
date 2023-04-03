@@ -1,0 +1,34 @@
+
+
+{% macro counsellor_card(counsellor) %}
+    <div class="couns-card-container">
+        <div class="couns-image-col">
+                {% if os.path.exists(os.path.join(app.static_folder, "images/counsellor/"+counsellor.image)) %}
+                 <img src="{{ url_for('static', filename='images/counsellor/'+counsellor.image) }}" alt="">
+            {% else %}
+                 <img src="{{ url_for('static', filename='images/counsellor/counsellor_default.jpg') }}" alt="">
+            {% endif %}
+        </div>
+
+        <div class="couns-info-col">
+            <div class="couns-info-name"><span>{{ counsellor.username|capitalize }}</span></div>
+            <div class="couns-info-type"><span>{{ print_counsellor_type(counsellor) }}</span></div>
+            <div class="couns-info-desc"><p>
+                {{ counsellor.description|truncate(180) }} <span>.....MORE</span>
+            </p></div>
+        </div>
+
+
+        <div class="couns-btn-col">
+            <a href="{{ url_for('counsellor.post', id=counsellor.id) }}"><button class="btn1" value={{ counsellor.id }}>Find out</button></a>
+        </div>
+        <div class="couns-review-col">
+            <div class="couns-review-fee">
+                <span class="icon material-symbols-outlined">payments</span><span class="text">{{ counsellor.fee }}+</span>
+            </div>
+            <div class="couns-review-clients">
+                <span>More than {{ counsellor.clients|length }}+ clients</span>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

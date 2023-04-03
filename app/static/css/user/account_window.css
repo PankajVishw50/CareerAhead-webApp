@@ -1,0 +1,110 @@
+
+
+.account-window-container{
+    width: 100%;
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: 1.2fr 1.7fr .8fr;
+    grid-template-rows: 100px 75px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    padding: 10px;
+    background: rgba(15, 22, 14, 0.1);
+    border-radius: 2px;
+}
+
+.acc-window-image{
+    border: none;
+    display: flex;
+    background: var(--gradient-blue-background);
+    box-shadow: 1px 1px 2px gray;
+    justify-content: center;
+    align-items: center;
+}
+.acc-window-image > img{
+}
+
+.acc-window-info{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.acc-window-info-header{
+    font-family: "Josefin Sans", sans-serif;
+}
+.acc-window-info-attr{
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    gap: 5px;
+}
+.acc-window-info-attr .box{
+    font-family: var(--text-small-straight);
+    font-size: 13px;
+    color: white;
+    padding: 5px;
+
+}
+.acc-window-info-attr .gender{
+    background: #F7C8E0;
+}
+.acc-window-info-attr .age{
+    background: #BAD7E9;
+}
+
+
+.acc-window-design{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 70%;
+}
+.acc-window-design > div{
+    border: 5px solid #7aa7c7;
+    width: 10%;
+    border-radius: 5px;
+}
+
+.acc-window-design .first{
+    height: 80%;
+}
+.acc-window-design .second{
+}
+.acc-window-design .third{
+    height: 90%;
+}
+
+
+.acc-window-button{
+    display: flex;
+    padding: 10px 25px;
+    grid-column: span 3;
+}
+.acc-window-button a {
+    width: 100%;
+}
+.acc-window-button a button{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

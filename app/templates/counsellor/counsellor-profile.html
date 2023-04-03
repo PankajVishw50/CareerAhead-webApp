@@ -1,0 +1,86 @@
+{% extends "main/base.html" %}
+{% from "counsellor/counsellor-profile-view.html" import counsellor_profile_view %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main/profile.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/counsellor/counsellor-profile.css') }}">
+
+{% endblock %}
+
+{% block title %} Profile {% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    {{ counsellor_profile_view(current_user) }}
+
+    <div class="profile-edit-container">
+        <div class="edit-header">
+            <h3>Upload Necessary data to proceed further <span>(To register as counsellor/change already registered data)</span></h3>
+        </div>
+
+        <div class="edit-profile">
+            <form action="" method="POST" id="edit-form">
+                <div class="update-profile-info">
+                    <h4>Things to consider before applying:: </h4>
+                    <ol id="upload-list">
+                        <li>Provide contact number</li>
+                        <li>Provide proof of claims</li>
+                        <li>All the provided details/claims will be checked by our team in further stages</li>
+                        <li>No Changes in submitted data afterwards</li>
+                    </ol>
+                </div>
+                <div class="upload-button">
+                    {{ form.hidden_tag() }}
+                    {{ form.submit(class='btn-blue-1') }}
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+{% block body_last %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='javascript/set-passwordField-width.js') }}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

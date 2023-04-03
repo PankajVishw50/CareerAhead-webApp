@@ -1,0 +1,29 @@
+{% extends "main/base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/login.css') }}">
+
+{% endblock %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+
+{% block content %}
+    <div class="login">
+        <div class="form">
+            <h2>Login</h2>
+            <form method="POST">
+                {{ form.hidden_tag() }}
+
+                {{ form.email(class='email data-field', placeholder='example@email.com') }}
+                {{ form.password(class='password data-field', placeholder='password') }}
+                <div class="remember">{{ form.remember() }} {{ form.remember.label() }}</div>
+                {{ form.submit(class='login-btn btn1') }}
+            </form>
+            <p><a href="{{ url_for('auth.create_account') }}">New User? Create account.. </a></p>
+        </div>
+    </div>
+{% endblock %}

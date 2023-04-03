@@ -1,0 +1,24 @@
+
+.clients-container{
+    margin: 25px 0;
+}
+
+.clients-container h3{
+    font-family: "Titillium Web", sans-serif;
+    margin-bottom: 10px;
+}
+
+.clients-container .clients{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.clients .client-container{
+    background: var(--minor-blue-header);
+    color: white;
+    padding: 10px;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 12px;
+
+}

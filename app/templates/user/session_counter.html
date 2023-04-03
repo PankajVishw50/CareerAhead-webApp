@@ -1,0 +1,44 @@
+
+
+
+<div class="session-counter-container">
+    <div class="session-counter-inner-container">
+        <div class="inner-h1">
+            <h1>Counter</h1>
+        </div>
+
+        <div class="inner-counter">
+            {% if current_user.can(Permission.COUNSELLOR) %}
+                <p>{{ current_user.clients|length }}</p>
+            {% else %}
+                <p>{{ current_user.sessions|length }}</p>
+            {% endif %}
+        </div>
+
+        <div class="inner-info">
+            {% if current_user.can(Permission.COUNSELLOR) %}
+                <p> This is clients counter. It shows how many clients you have served
+                    till using this website</p>
+            {% else %}
+                <p> This is session count.It shows your progress as human being.
+                    To grow and understand yourself better explore other counsellors</p>
+            {% endif %}
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

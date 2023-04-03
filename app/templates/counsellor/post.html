@@ -1,0 +1,58 @@
+{% extends "main/base.html" %}
+{% from "counsellor/counsellor-profile-view.html" import counsellor_profile_view %}
+
+{% block head %}
+    {{ super() }}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main/profile.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/counsellor/post.css') }}">
+{% endblock %}
+
+{% block title %} Book {% endblock %}
+
+{% block content %}
+    <div class="profile-container">
+        {{ counsellor_profile_view(counsellor) }}
+
+        <div class="post-container">
+            <div class="post-headers">
+                <h3>Post</h3>
+            </div>
+            <hr>
+
+            <div class="post-description">
+                <p>{{ counsellor.description }}</p>
+            </div>
+
+            <div class="price">
+                <span class="material-symbols-outlined vector">paid</span>
+                <p> {{ counsellor.fee }}</p>
+                <span class="placeholder">(This amount will be charged from your account)</span>
+            </div>
+
+            <div class="action-links">
+                <button class="btn1 book-btn">Book Session</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body_last %}
+    <script src="{{ url_for('static', filename='javascript/book.js') }}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

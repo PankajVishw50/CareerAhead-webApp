@@ -1,0 +1,6 @@
+{% from "macros/counsellor_card.html" import counsellor_card %}
+
+
+{% for counsellor in counsellors %}
+    {{ counsellor_card(counsellor) }}
+{% endfor %}

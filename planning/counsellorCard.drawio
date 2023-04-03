@@ -1,0 +1,49 @@
+<mxfile host="Electron" modified="2023-04-03T14:42:40.186Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="bFs7CWovcnINw2tlptZ3" version="21.1.2" type="device">
+  <diagram id="G3rvb-Ql4BrwrGuH6TgC" name="Page-1">
+    <mxGraphModel dx="864" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="h6zjRcmj9duQPrLIo6n4-44" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="240" y="380" width="400" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="h6zjRcmj9duQPrLIo6n4-45" value="Image" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="244" y="385" width="141" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="h6zjRcmj9duQPrLIo6n4-47" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="393" y="385" width="243" height="138" as="geometry" />
+        </mxCell>
+        <mxCell id="h6zjRcmj9duQPrLIo6n4-49" value="Button to Visit" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="244" y="530" width="142" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h6zjRcmj9duQPrLIo6n4-50" value="Clients" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="393" y="530" width="242" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h6zjRcmj9duQPrLIo6n4-51" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="396" y="388" width="237" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="h6zjRcmj9duQPrLIo6n4-52" value="Name" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="396" y="388" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h6zjRcmj9duQPrLIo6n4-53" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="396" y="418" width="237" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="h6zjRcmj9duQPrLIo6n4-54" value="Expertise field" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="402" y="425" width="88.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h6zjRcmj9duQPrLIo6n4-55" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="396" y="464" width="237" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="h6zjRcmj9duQPrLIo6n4-56" value="Clients" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="396" y="462" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h6zjRcmj9duQPrLIo6n4-57" value="" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="396" y="492" width="237" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="h6zjRcmj9duQPrLIo6n4-58" value="Fee" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+          <mxGeometry x="390" y="490" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

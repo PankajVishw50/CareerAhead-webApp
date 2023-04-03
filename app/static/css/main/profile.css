@@ -1,0 +1,216 @@
+
+
+.profile-container{
+    flex: 1;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: .3fr .7fr;
+    grid-column-gap: 10px;
+    padding: 10px;
+}
+
+.profile-viewer-container{
+    background: white;
+    border: 1px solid rgb(231, 231, 241);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .3fr .8fr;
+    padding: 10px 0;
+}
+.profile-main-image{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+}
+.profile-main-image .profile-image{
+    border: 1px solid rgba(255, 235, 180, .5);
+    background: rgba(247, 241, 229, 0.5);
+    width: 140px;
+    height: 140px;
+    box-shadow: 0 0 3px black;
+    margin: auto;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.profile-main-image .profile-name{
+    margin: 20px 0 10px 0;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.profile-info{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 1fr 1fr;
+    align-content: start;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.profile-info div{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    background: #fafafa;
+    font-family: "Sofia Sans Extra Condensed", sans-serif;
+    position: relative;
+}
+.profile-info div .data{
+    width: 100%;
+    padding: 0 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 10px;
+    transition: all .2s;
+    overflow: hidden;
+}
+.profile-info div .label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .2s;
+}
+
+.profile-info div:hover {
+    background: rgb(251, 248, 242);
+}
+.profile-info div:hover .data{
+    filter: blur(8px);
+    background: rgb(251, 248, 242);
+}
+.profile-info div:hover .data span{
+    opacity: 0;
+}
+.profile-info div:hover .label{
+    opacity: 1;
+}
+
+
+.edit-profile{
+    padding: 50px 10px;
+    max-width: 600px;
+}
+
+.edit-header{
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+#edit-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 30px;
+    grid-column-gap: 40px;
+    justify-content: center;
+}
+
+.form-element{
+    display: flex;
+    align-items: center;
+}
+.form-element-logo{
+    height: 100%;
+    background: var(--minor-blue-header);
+    color: white;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+.input-field{
+    border: 1px solid black;
+    border-left: none;
+    padding: 0 10px;
+    height: 35px;
+    outline: none;
+    width: 100%;
+    min-width: 150px;
+}
+
+#email{
+    grid-column: 1 / span 2;
+}
+
+#description{
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 10;
+}
+#description-input{
+    height: 100%;
+}
+
+#password{
+    grid-column: 1/ span 2;
+}
+#password-input{
+    width: 150px;
+}
+
+#edit-form .required{
+    height: 10px;
+    background: red;
+    width: 10px;
+    margin: 0 10px;
+    border: 1px double orange;
+    transform: rotateZ(45deg);
+}
+
+#edit-form .required span{
+    position: absolute;
+    transform: rotateZ(-45deg);
+    opacity: 0;
+    padding: 5px 10px;
+    transition: 0.2s opacity;
+    background: #ababab;
+    display: none;
+    font-size: 12px;
+    color: white;
+}
+#edit-form .required:hover span{
+    opacity: 1;
+    display: inline;
+}
+
+#submit-input{
+    color: white;
+    height: 40px;
+}
+
+
+/* Responsive View */
+@media screen and (max-width: 800px){
+    .profile-container{
+        grid-template-columns: 100%;
+        justify-content: center;
+        grid-row-gap: 25px;
+    }
+
+    .edit-profile{
+        width: 100%;
+    }
+    #edit-form{
+        grid-template-columns: .7fr;
+        grid-template-rows: auto;
+    }
+    .form-element, #email, #password{
+        grid-row: auto;
+        grid-column: auto;
+    }
+}
+
+
+
+
+
+
+
+
+

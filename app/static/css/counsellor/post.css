@@ -1,0 +1,36 @@
+
+.post-main-container{
+    border: 1px solid green;
+}
+
+.post-headers{
+    margin-bottom: 25px;
+}
+.post-headers h3{
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.post-description{
+    padding: 10px 5px;
+    font-family: var(--text-small-straight);
+}
+
+.price{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+.price .vector{
+    color: green;
+}
+.price p{
+    font-family: "Times New Roman", sans-serif;
+}
+.price .placeholder{
+    margin: 0 10px;
+    color: gray;
+}
+
+.action-links > button{
+    padding: 10px 10px;
+}

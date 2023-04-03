@@ -1,0 +1,37 @@
+
+
+<div class="account-window-container">
+    <div class="acc-window-image">
+        <img src="{{ url_for('static', filename='images/user/user.png') }}" alt="user default image">
+    </div>
+
+    <div class="acc-window-info">
+        <div class="acc-window-info-header">
+            <h3>{{ current_user.username|capitalize }}</h3>
+        </div>
+        <div class="acc-window-info-attr">
+            <p class="gender box">{{ current_user.user_gender.gender|first|capitalize }}</p>
+            <p class="age box">{{ current_user.age }}</p>
+        </div>
+
+    </div>
+
+    <div class="acc-window-design">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+    </div>
+
+    <div class="acc-window-button">
+
+        {% if current_user.can(Permission.COUNSELLOR) %}
+            <a href="{{ url_for('counsellor.counsellor_profile') }}">
+                <button class="btn-green-edit"> EDIT </button>
+            </a>
+        {% else %}
+            <a href="{{ url_for('user.user_profile') }}">
+                <button class="btn-green-edit"> EDIT </button>
+            </a>
+        {% endif %}
+    </div>
+</div>

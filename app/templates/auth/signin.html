@@ -1,0 +1,35 @@
+
+{% extends "main/base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth/login.css') }}">
+
+{% endblock %}
+
+{% block title %}
+    Create Account
+{% endblock %}
+
+
+{% block content %}
+    <div class="login">
+        <div class="form">
+            <h2>Create Account</h2>
+            <form method="POST">
+                {{ form.hidden_tag() }}
+
+                {{ form.username(class="username data-field", placeholder="Enter an username..") }}
+                {{ form.age(class="age data-field", placeholder="Enter your age") }}
+                {{ form.gender(class="gender") }}
+                {{ form.email(class="email data-field", placeholder="example@gmail.com") }}
+                {{ form.password(class="password data-field", placeholder="Enter an password") }}
+                {{ form.confirm_password(class="confirm-password data-field", placeholder="Confirm Password") }}
+
+                <div class="remember">{{ form.remember() }} {{ form.remember.label() }}</div>
+                {{ form.submit(class='login-btn btn1') }}
+            </form>
+            <p><a href="#">New User? Create account.. </a></p>
+        </div>
+    </div>
+{% endblock %}

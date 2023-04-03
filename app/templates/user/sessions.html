@@ -1,0 +1,18 @@
+{% from "macros/counsellor_card.html" import counsellor_card %}
+
+<div class="sessions-container">
+
+    <h3>Previous Sessions</h3>
+    <hr>
+
+    <div class="sessions">
+        {% if current_user.sessions %}
+            {% for session in current_user.sessions|reverse %}
+                {{ counsellor_card(session) }}
+            {% endfor %}
+        {% else %}
+            <div class="info">No previous sessions</div>
+        {% endif %}
+    </div>
+
+</div>

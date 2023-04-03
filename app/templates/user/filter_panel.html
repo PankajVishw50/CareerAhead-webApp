@@ -1,0 +1,46 @@
+
+
+<div class="panel-container">
+
+    <div class="search-container">
+        <input type="text" placeholder="Enter counsellor name... " name="name">
+    </div>
+
+    <div class="gender-container">
+        <div class="male gender">
+            <div class="male-logo gender-logo"><span class="material-symbols-outlined">male</span></div>
+            <div class="male-selector gender-selector"><input type="radio" name="gender" value="2"></div>
+        </div>
+        <div class="female gender">
+            <div class="female-logo gender-logo"><span class="material-symbols-outlined">female</span></div>
+            <div class="female-selector gender-selector"><input type="radio" name="gender" value="1"></div>
+        </div>
+    </div>
+
+    <div class="filter-container">
+        <h5>Select types: </h5>
+        <div class="filter-names">
+            {% for type in types %}
+                <div class="type-container">
+                    <button class="type {{ type.id }}" value="{{ type.id }}">{{ type.type }}</button>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="filter-controller">
+            <button class="expand-collapse" value="1">expand...</button>
+        </div>
+    </div>
+
+    <div class="price-container">
+        <span class="starting-price">10$</span>
+        <input type="range" min="100" max="1500" step="200" value="1500" id="slider">
+        <span class="ending-price"></span>
+    </div>
+
+    <div class="filter-button">
+        <button class="btn1" id="filter-submit">Filter</button>
+    </div>
+
+
+
+</div>

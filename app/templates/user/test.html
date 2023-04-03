@@ -1,0 +1,56 @@
+{% extends "main/base.html" %}
+{% from "macros/counsellor_card.html" import counsellor_card_test %}
+
+
+{% block content %}
+    <div class="counsellor-container">
+    this is something
+    </div>
+{% endblock %}
+
+
+{% block body_last %}
+    <script>
+    console.log("HI");
+
+    $(document).ready(function() {
+        let page, base;
+
+        function send() {
+
+            $.ajax({
+                url: "/get-cur-page-base",
+                type: "get",
+                success: function(response){
+                    page = response.get("page")
+                    base = response.get("base")
+                }
+            })
+
+
+            $.ajax({
+                url: "/get-counsellor-test",
+                type: "post",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    page: page,
+                    base: base
+                }),
+                success: function(response){
+                    $(".counsellor-container").html(response)
+                }
+            })
+
+        }
+
+
+        send()
+
+
+    })
+
+
+
+    </script>
+
+{% endblock %}

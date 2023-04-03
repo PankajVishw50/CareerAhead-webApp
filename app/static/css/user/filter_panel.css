@@ -1,0 +1,154 @@
+
+
+.panel-container{
+    width: available;
+    border: 1px solid rgb(231, 231, 241);
+    box-shadow: 0 0 .8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    height: fit-content;
+    min-height: 800px;
+    margin: 5px 10px;
+    border-radius: 4px;
+    background: white;
+}
+
+.search-container{
+    padding: 2px;
+}
+.search-container input{
+    height: 40px;
+    border: 1px solid gray;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0 10px;
+    outline-color: var(--border-light-blue);
+}
+
+
+.gender-container{
+    display: flex;
+    padding: 10px 0;
+    margin-top: 15px;
+}
+.gender-container .gender{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 50px;
+}
+
+.gender-logo{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+.male-logo{
+    background: rgba(247, 96, 89, .7);
+    box-shadow: .5px .5px 1px rgba(88, 134, 245, .6);
+}
+.female-logo{
+    background: rgba(88, 134, 245, .6);
+    box-shadow: .5px .5px 1px rgba(247, 96, 89, .7);
+}
+
+
+.filter-container > h5{
+    font-family: "Titillium Web", sans-serif;
+    color: gray;
+}
+
+.filter-names{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    padding: 10px 5px;
+}
+.type-container{
+    display: flex;
+    min-height: 35px;
+    justify-content: center;
+}
+.type-container .type{
+    border: 1px solid var(--border-light-blue);
+    background: #fafafa;
+    font-size: 13px;
+    padding: 0 5px;
+    border-radius: 3px;
+    width: 100%;
+    font-family: var(--text-small-straight);
+}
+.type-container .type:hover{
+    background: var(--border-light-blue);
+}
+
+.filter-controller .expand-collapse{
+    font-family: var(--text-small-straight);
+    background: white;
+    color: blue;
+    font-size: 14px;
+}
+.filter-controller .expand-collapse:hover{
+    text-decoration: underline;
+}
+
+
+.price-container{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: .3fr 1fr .3fr;
+}
+
+#slider{
+    width: 150px;
+    min-width: 125px;
+}
+
+.price-container .starting-price{
+    margin-right: 10px;
+}
+.price-container .ending-price{
+    margin-left: 10px;
+}
+.price-container span{
+    font-family: "Sofia Sans Extra Condensed", sans-serif;
+}
+
+
+.filter-button{
+    padding: 10px 0;
+    margin-top: 25px;
+}
+#filter-submit{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+/* Responsive View */
+@media screen and (max-width: 1100px) {
+    .panel-container{
+        min-height: auto;
+        max-width: 600px;
+        margin: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

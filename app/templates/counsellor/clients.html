@@ -1,0 +1,25 @@
+
+
+<div class="clients-container">
+
+    <h3>Previous Clients</h3>
+    <hr>
+
+    <div class="clients">
+        {% if current_user.clients %}
+            {% for client in current_user.clients %}
+
+                <div class="client-container">
+                {{ client.username|capitalize }}
+                </div>
+
+            {% endfor %}
+        {% else %}
+            <div class="info">No previous clients</div>
+        {% endif %}
+    </div>
+
+
+
+
+</div>

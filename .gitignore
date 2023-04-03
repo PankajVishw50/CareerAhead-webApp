@@ -2,3 +2,7 @@
 __pycache__/
 venv/
 /test.py
+counsellor_data.txt
+dev-data.sqlite
+dev-data.sqlite
+
