@@ -1,4 +1,4 @@
-from app.model import User, Gender, CounsellorType
+from app.model import User, Gender, CounsellorType, Permission, Role
 from app import db
 import time
 
@@ -480,3 +480,28 @@ def create_gender():
 
     db.session.add_all([female, male])
     db.session.commit()
+
+
+# This function add roles  with different permissions
+def create_roles():
+    roles = {
+        "user": Permission.BOOK_SESSION | Permission.CHANGE_ACCOUNT,  # 0b00000011
+        "counsellor": Permission.CHANGE_ACCOUNT | Permission.APPROVE_SESSION | Permission.POST,  # 0b00001110
+        "administer": Permission.ADMINISTER  # Ob11111111
+    }
+
+    for r in roles:
+        role = Role.query.filter_by(name=r).first()
+        if role is None:
+            role = Role(name=r, permissions=roles[r])
+            db.session.add(role)
+    db.session.commit()
+
+
+
+
+
+
+
+
+

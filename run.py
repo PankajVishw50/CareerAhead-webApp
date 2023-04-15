@@ -1,13 +1,11 @@
 from app import create_app, db
 from app.utils import get_maxPage, print_counsellor_type
-from flask_migrate import Migrate
 from app.model import Gender, Role, User, CounsellorType, Session, CounsellorTypeAssociation, Permission
 import os
 from werkzeug.security import generate_password_hash, check_password_hash
 import db_controller
 
-app = create_app("development")  # Pass development, production, testing according to your need.
-migrate = Migrate(app, db)
+app = create_app("production")  # Pass development, production, testing according to your need.
 app.jinja_env.globals.update(os=os, app=app)
 
 
