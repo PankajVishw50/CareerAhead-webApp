@@ -26,6 +26,3 @@ def make_shell_context():
 
 
 app.add_template_global(context_processor()['print_counsellor_type'], name='print_counsellor_type')
-
-if __name__ == "__main__":
-    app.run()
